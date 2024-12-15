@@ -1,0 +1,38 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="luban.js"></script>
+<body>
+<div style="font-weight: bold; font-size: 2.0em;"><a href="https://www.luban3d.com/" target="LuBan">LuBan</a> Sequence Assembler</div>
+<p><a href="https://www.luban3d.com/" target="LuBan"><b>LuBan</b></a> provides a <b>Modular Cut</b> option that allows you to <b>#MakeItBig</b>.  However, assembly can become overwhelming if a large number of pieces are provided.  Additionally, assembling in the wrong order can prevent some pieces from fitting together.  Fortunately, LuBan creates a <b>Sequence.txt</b> file that lays out the cut-order...  <i>UNFORTUNATELY,</i> this is a multi-dimensional array of numbers that don't seem to have rhyme nor reason to the untrained eye.</p>
+<p><i>NOW,</i> simply copy/paste your <b>Sequence.txt</b>, decide whether you want to deal with the <b>Tiny</b> pieces, click 'GO', and your Assembly instructions will be laid out in plain english.  <i>(Sorry folks, that's my native language)</i></p> 
+<p><i>(Default Sequence.txt provided is the Cow example shown in LuBan's Documentation)</i></p>
+<fieldset>
+<legend>SEQUENCE</legend>
+<!-- paste your sequence.txt file here -->
+<textarea style="width: 80%; height: 15em;">
+Part_1: 1, 1
+Part_2: 1, 0, 1
+Part_3: 1, 0, 0
+Part_4: 0, 1
+Part_5: 0, 0
+
+</textarea>
+<br/>
+<span style="float: left; padding-right: 5.0em;"><input type="checkbox" name="NO_TINY" id="NO_TINY"/><label for="NO_TINY"> Ignore Tiny Pieces</label></span>
+<span style="float: left;"><input type="button" value="GO!" onclick="LuBan.Build();"/></span>
+<span style="float: left; padding-left: 15.0em;"><input type="button" value="ABOUT" onclick="LuBan.About();"/></span>
+<br style="clear: both;"/>
+</fieldset>
+
+
+<div id="DEBUG"></div>
+
+<div id="WARNINGS"></div>
+
+<div id="OUTPUT"></div>
+
+</body>
+
+</html>
+
+
